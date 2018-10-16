@@ -1,0 +1,62 @@
+{
+  "name": "dumpcord",
+  "description": "Discord dumping",
+  "version": "0.0.0",
+  "author": "William Blythe @willyb321",
+  "bin": {
+    "dumpcord": "./bin/run"
+  },
+  "bugs": "https://github.com/willyb321/dumpcord/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^2",
+    "cli-ux": "^4.9.1",
+    "configstore": "^4.0.0",
+    "discord.js": "^11.4.2",
+    "inquirer": "^6.2.0",
+    "tslib": "^1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@oclif/tslint": "^3",
+    "@types/chai": "^4",
+    "@types/mocha": "^5",
+    "@types/node": "^10",
+    "globby": "^8",
+    "ts-node": "^7",
+    "tslint": "^5",
+    "typescript": "^3.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/willyb321/dumpcord",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "dumpcord",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "willyb321/dumpcord",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "tslint -p . -t stylish",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
+}
