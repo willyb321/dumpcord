@@ -28,8 +28,29 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`dumpcord dump`](#dumpcord-dump)
 * [`dumpcord hello [FILE]`](#dumpcord-hello-file)
 * [`dumpcord help [COMMAND]`](#dumpcord-help-command)
+* [`dumpcord init`](#dumpcord-init)
+
+## `dumpcord dump`
+
+Initialize config
+
+```
+USAGE
+  $ dumpcord dump
+
+OPTIONS
+  -h, --help           show CLI help
+  -i, --id=id          Discord channel / server ID?
+  -o, --output=output  Output path? (relative to current directory)
+
+EXAMPLE
+  $ dumpcord dump
+```
+
+_See code: [src/commands/dump.ts](https://github.com/willyb321/dumpcord/blob/v0.0.0/src/commands/dump.ts)_
 
 ## `dumpcord hello [FILE]`
 
@@ -67,4 +88,22 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.3/src/commands/help.ts)_
+
+## `dumpcord init`
+
+Initialize config
+
+```
+USAGE
+  $ dumpcord init
+
+OPTIONS
+  -h, --help         show CLI help
+  -t, --token=token  Discord token
+
+EXAMPLE
+  $ dumpcord init
+```
+
+_See code: [src/commands/init.ts](https://github.com/willyb321/dumpcord/blob/v0.0.0/src/commands/init.ts)_
 <!-- commandsstop -->
